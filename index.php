@@ -7,12 +7,7 @@ if ($gen) {
     
     $i=0;
     $num = 200;
-    for ($i=0; $i <  $num; $i++) { 
-        $rand_num = rand(1000000000000000, 99999999999999);
-        echo "\n\n\n";
-        // $pins = $rand_num . "\n". "<br>";
-        $_SESSION['pins'] = $rand_num . "\n". "<br>";
-    };
+    
        
 
 ?>
@@ -64,12 +59,18 @@ if ($gen) {
         <div class="display">
         <h1>Recharge Card Pin</h1>
             <?php 
-            
-                if (isset($_SESSION['pins'])) {
-                    echo $_SESSION['pins'];
-                }
+      for ($i=0; $i <  $num; $i++) { 
+        $rand_num = rand(1000000000000000, 99999999999999);
+        echo "\n\n\n";
+        // $pins = $rand_num . "\n". "<br>";
+        $_SESSION['pins'] = $rand_num . "\n". "<br>";
+         echo $_SESSION['pins'];
+         };
+                //if (isset($_SESSION['pins'])) {
+                   // echo $_SESSION['pins'];
+               // }
                           
-            };
+          };
             ?>
         </div>
        
